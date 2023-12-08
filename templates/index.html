@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <img class="logo" src="https://ead.ifrn.edu.br/portal/wp-content/uploads/2019/03/logo.3fd3099d4d22472cb384.png" alt="foto">
+        <h2>Instituto Federal de Educação, <br> Ciencia e Tecnologia do Rio Grande do Norte</h2>
+    </div><br><br><br>
+    <div class="col-12">
+        <p><a href="{{url_for('login')}}"><button>Login</button></a></p>
+        <p>Ao clicar, você poderá acessar <br>suas principais informações e o boletim.</p>
+    </div>
+    
+
+{% endblock %}
