@@ -10,18 +10,19 @@
     <div class="col-6">
         <img class="foto" src="https://suap.ifrn.edu.br{{ user_data['url_foto_150x200'] }}" alt="foto"> <br>
         {% for field in user_data %}
-        <b>{{ field }}</b>: {{ user_data[field] }} </p>
+        <h3><b>{{ field }}</b>: {{ user_data[field] }} </h3>
         {% endfor %}
     </div>
     <div class="col-6">
         <img class="logo" src="https://ead.ifrn.edu.br/portal/wp-content/uploads/2019/03/logo.3fd3099d4d22472cb384.png" alt="foto">
         <p>Instituto Federal de Educação, <br> Ciencia e Tecnologia do Rio Grande do Norte</p><br><br>
-        <p>Clique abaixo para <br>acessar seu boletim</p>
-        <p><a href="{{ url_for('boletim',ano=2020) }}"><button>boletim 1° ano</button></a></p>
-        <p><a href="{{ url_for('boletim',ano=2021) }}"><button>boletim 2° ano</button></a></p>
-        <p><a href="{{ url_for('boletim',ano=2022) }}"><button>boletim 3° ano</button></a></p>
-        <p><a href="{{ url_for('boletim',ano=2023) }}"><button>boletim 4° ano</button></a></p>
-    
+        <p>Escolha o ano para <br>acessar seu boletim</p>
+        <div class="opcoes">
+            <h4><a href="{{ url_for('boletim',ano=2020) }}"><button> 1° ano</button></a></h4>
+            <h4><a href="{{ url_for('boletim',ano=2021) }}"><button> 2° ano</button></a></h4>
+            <h4><a href="{{ url_for('boletim',ano=2022) }}"><button> 3° ano</button></a></h4>
+            <h4><a href="{{ url_for('boletim',ano=2023) }}"><button> 4° ano</button></a></h4>
+        </div>
     </div>
 </div>
 {% endblock %}
